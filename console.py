@@ -7,9 +7,9 @@ import repositories.league_repository as league_repository
 import repositories.team_repository as team_repository
 import repositories.player_repository as player_repository
 
-league_repository.delete_all()
-team_repository.delete_all()
 player_repository.delete_all()
+team_repository.delete_all()
+league_repository.delete_all()
 
 
 league1 = League("Premier League", 5)
@@ -23,7 +23,10 @@ team2 = Team("Manchester City", league1)
 team_repository.save(team2)
 
 player1 = Player("Messi", 3, 50, team1)
+player2 = Player("gessi", 3, 50, team1)
+player3 = Player("vessi", 3, 50, team1)
+
 player_repository.save(player1)
-
-
+player_repository.save(player2)
+player_repository.save(player3)
 pdb.set_trace()

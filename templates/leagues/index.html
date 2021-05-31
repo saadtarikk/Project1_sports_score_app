@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Leagues</h1>
+
+{% for league in all_leagues %}
+    <tr>
+        <td><a class="btn" href="/leagues/{{league.id}}">{{league.league_name}}</a></td>
+        <br>
+        
+        <!-- <td><a href="/leagues/{{league.id}}"> Number of teams in the league: {{league.league_size}}</a></td> -->
+    </tr>
+{% endfor %}
+
+
+{% endblock %}

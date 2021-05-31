@@ -6,16 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"> <!-- NEW -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- NEW -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   <title>Football Scores</title>
 </head>
 <body>
   <header>
-    <nav>
-      <ul class="menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/league_table">League Table</a></li>
-        <li><a href="fixutres">Fixtures</a></li>
-        <li><a href="admin">Admin</a></li>
+    <h1 class="title">Football Scores</h1>
+    <!-- <h2 class="subtitle">English Premier League</h2> -->
+    <nav class="nav">
+      <ul>
+        <li><a class="nav-link" href="/">Home</a></li>
+        <li><a class="nav-link" href="/leagues">League Table</a></li>
+        <li><a class="nav-link" href="/fixutres">Fixtures</a></li>
+        <li><a class="nav-link" href="/admin">Admin</a></li>
       </ul>
     </nav>
   </header>

@@ -6,7 +6,7 @@ from models.team import Team
 
 
 def save(player):
-    sql = "INSERT INTO players (player_name, fouls, goals, team_id) VALUES (%s, %s, %s, %s)"
+    sql = "INSERT INTO players (player_name, fouls, goals, team_id) VALUES (%s, %s, %s, %s) RETURNING *"
     values = [player.player_name, player.fouls,
               player.goals, player.team_id.id]
     results = run_sql(sql, values)
@@ -46,13 +46,13 @@ def delete_all():
 
 
 def delete(id):
-    sql = "DELETE * FROM players WHERE id = %s"
+    sql = "DELETE FROM players WHERE id = %s"
     values = [id]
     run_sql(sql, values)
 
 
 def update(player):
-    sql = "UPDATE players SET (player_name, fouls, goal, team_id) = (%s, %s, %s, %s"
+    sql = "UPDATE players SET (player_name, fouls, goals, team_id) = (%s, %s, %s, %s)"
     values = [player.player_name, player.fouls,
               player.goals, player.team_id.id]
     run_sql(sql, values)

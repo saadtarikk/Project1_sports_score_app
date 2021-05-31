@@ -5,8 +5,8 @@ from models.player import Player
 
 
 def save(team):
-    sql = "INSERT INTO teams (team_name, league_id) VALUES (%s, %s) RETURNING*"
-    values = [team.team_name, team.league_id.id]
+    sql = "INSERT INTO teams (team_name, league_id) VALUES (%s, %s) RETURNING *"
+    values = [team.team_name, team.league_id]
     results = run_sql(sql, values)
     id = results[0]['id']
     team.id = id
@@ -50,7 +50,7 @@ def delete(id):
 
 def update(team):
     sql = "UPDATE teams SET (team_name, league_id) = (%s, %s) WHERE id = %s"
-    values = [team.team_name, team.league_id.id]
+    values = [team.team_name, team.league_id]
     run_sql(sql, values)
 
 
