@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Add Team</h1>
+<h1>Add Player</h1>
 <form action="/players" method="post">
     <input type="text" id="player_name" name="player_name" placeholder="Enter Player Name" required autofocus>
     <input type="text" id="fouls" name="fouls" placeholder="Fouls" required autofocus>
     <input type="text" id="goals" name="goals" placeholder="total goals" required autofocus>
     <br>
     <label for="team_id">Select team</label>
-    <select name="team_id" id="team_id"></select>
+    <select name="team_id" id="team_id">
     {% for team in all_teams %}
     <option value="{{team.id}}">{{team.team_name}}</option>
     {% endfor %}
+    </select>
     <br>
     <button class="btn" type="submit">Add player</button>
     <a class="btn" href="/players">Cancel</a>

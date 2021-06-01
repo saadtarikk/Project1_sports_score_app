@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS fixtures;
 DROP TABLE IF EXISTS players;
 DROP TABLE IF EXISTS teams;
 DROP TABLE IF EXISTS leagues;
@@ -21,4 +22,13 @@ CREATE TABLE players (
     fouls INT,
     goals INT,
     team_id INT REFERENCES teams(id)
+);
+
+CREATE TABLE fixtures (
+    id SERIAL PRIMARY KEY,
+    home_team INT REFERENCES teams(id),
+    away_team INT REFERENCES teams(id),
+    fixture_date DATE,
+    fixture_result VARCHAR(255),
+    league_id INT REFERENCES leagues(id)
 );

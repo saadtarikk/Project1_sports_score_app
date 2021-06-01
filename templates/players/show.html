@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <p>
+        {{player.player_name}}
+    </p>
+    <p><a href="/players/{{player.id}}/edit">Edit</a></p>
+</div>
+
+{% endblock %}

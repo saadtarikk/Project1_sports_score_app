@@ -14,6 +14,7 @@ body {
   font-family: "Lato", sans-serif;
   color: #fff;
   background-color: #444;
+  /* line-height: 1.5; */
 
   /* keep footer at bottom (along with footer css styling ) */
   position: relative;
@@ -54,7 +55,6 @@ header {
   background: var(--secondary-color);
   padding: 1em;
   padding-left: 1.5em;
-  background-image: url(../static/images/black-white-soccer-ball-on-grass-field-web-header.jpeg);
   background-position: bottom;
   background: var(--primary-color);
   color: #000;
@@ -87,6 +87,10 @@ header {
   color: white;
   text-decoration: none;
 }
+.teams-list {
+  color: white;
+  text-decoration: none;
+}
 
 .nav-link:hover {
   color: var(--secondary-color);
@@ -97,6 +101,7 @@ header {
 .main {
   margin: 0 3em;
   padding-bottom: 5.5rem;
+  line-height: 1.5;
 }
 
 .main-page-section > h4 > span {
@@ -175,3 +180,106 @@ header {
   font-size: 1.2em;
   background-color: var(--secondary-color);
 }
+
+.table-col-teams > a {
+  color: white;
+}
+
+.fixture-layout {
+  width: auto;
+}
+
+#fixture_result {
+  background-color: var(--primary-color);
+  width: 3em;
+  border: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+#fixture_date {
+  display: inline-block;
+  width: 82%;
+}
+
+.fixture-hover:hover {
+  background-color: transparent;
+}
+able {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  padding: 1em;
+  width: 100%;
+} 
+
+thead { 
+  background: var(--primary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  margin: 0;
+}
+
+th {
+  text-align: left;
+}
+
+/* Do not affect last updated text line aligned left */
+td:not(:last-of-type) {
+  text-align: center;
+}
+
+td:nth-of-type(2) {
+  text-align: left;
+}
+
+.table-col-form {
+  letter-spacing: 0.5em;
+  text-align: justify;
+  font-family: "Helvetica";
+}
+
+.table-col-points,
+.table-col-teams {
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: var(--primary-color);
+}
+
+tfoot {
+  font-weight: lighter;
+  margin-left: 1em;
+  text-align: left;
+}
+
+tfoot > * :hover {
+  background-color: white;
+}
+
+.table-fixtures {
+  width: auto;
+}
+
+.table-league {
+  border-bottom: 1px dashed lightgrey;
+}
+
+.table-fixtures > tbody > tr > td {
+  text-align: center;
+}
+
+.table-fixtures > thead > tr > th {
+  padding-right: 4em;
+}
+
+.table-col-teams > a {
+  text-decoration: none;
+  color: white;
+}
+
+.table-col-fixture-date {
+  padding-left: 1em;
+}
+/* END of table styling 

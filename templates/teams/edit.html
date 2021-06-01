@@ -3,12 +3,21 @@
 {% block content %}
 
 <h2>Team Maintenance - Update Team Name</h2>
-<form action="/teams/{{team}}" method="post">
+<form action="/teams/{{team.id}}" method="post">
     <div>
-        <label class="fixture-input-label" for="team_name">Team Name</label>
+        <label class="fixture-input-label" for="team_name">Team Name: </label>
         <input class="input-maintenance" type="text" id="team_name" value="{{team.team_name}}" name="team_name" required
             autofocus>
+            <br>
+            <br>
+        <label for="league_id">Select League: </label>
+        <select name="league_id" id="league_id">
+        {% for league in all_leagues %}
+        <option value="{{league.id}}">{{league.league_name}}</option>       
+        {% endfor %}
+        </select>
     </div>
+
 
     <button class="btn" type="submit">Confirm Edit</button>
     <a class="btn" href="/teams">Cancel</a>

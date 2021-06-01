@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/players/{{player.id}}" method="post">
+    <div>
+        <label class="player-input-label" for="player_name">Player Name: </label>
+        <input class="input-maintenance" type="text" id="player_name" value="{{player.player_name}}" name="player_name" required
+            autofocus>
+            <br>
+            <br>
+        <label class="player-input-label" for="fouls">Fouls: </label>
+        <input class="input-maintenance" type="text" id="fouls" value="{{player.fouls}}" name="fouls" required
+                autofocus>
+            <br>
+            <br>
+        <label class="player-input-label" for="goals">Goals: </label>
+        <input class="input-maintenance" type="text" id="goals" value="{{player.goals}}" name="goals" required
+                    autofocus>
+        <label for="team_id">Select Team: </label>
+        <select name="team_id" id="team_id">
+        {% for team in all_teams %}
+        <option value="{{team.id}}">{{team.team_name}}</option>       
+        {% endfor %}
+        </select>
+    </div>
+
+
+    <button class="btn" type="submit">Confirm Edit</button>
+    <a class="btn" href="/teams">Cancel</a>
+</form>
+{% endblock %}

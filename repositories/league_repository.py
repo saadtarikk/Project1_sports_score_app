@@ -1,3 +1,4 @@
+from pdb import run
 from db.run_sql import run_sql
 from models.league import League
 from models.team import Team
@@ -42,6 +43,12 @@ def delete_all():
 def delete(id):
     sql = "DELETE FROM leagues WHERE id = %s"
     values = [id]
+    run_sql(sql, values)
+
+
+def update(league):
+    sql = "UPDATE leagues SET (league_name, League_size) = (%s, %s) WHERE id = %s"
+    values = [league.league_name, league.league_size]
     run_sql(sql, values)
 
 

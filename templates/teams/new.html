@@ -6,12 +6,14 @@
     <input type="text" id="team_name" name="team_name" placeholder="Enter Team Name" required autofocus>
     <br>
     <label for="league_id">Select League</label>
-    <select name="league_id" id="league_id"></select>
+    <select name="league_id" id="league_id">
     {% for league in all_leagues %}
     <option value="{{league.id}}">{{league.league_name}}</option>
+
     {% endfor %}
+    </select>
     <br>
-    <button class="btn" type="submit">Add Task</button>
+    <button class="btn" type="submit">Add Team</button>
     <a class="btn" href="/teams">Cancel</a>
 
 </form>

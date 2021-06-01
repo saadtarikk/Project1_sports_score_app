@@ -16,7 +16,7 @@
                 <form class="delete-form" action="/teams/{{team.id}}/delete" method="POST">
                     <button class="trash-button"><i class="fas fa-trash fa-1x" aria-hidden="true"> </i></button>
 
-                    {{team.team_name}} <a class="edit-icon" href="/teams/{{team.id}}/edit"><i
+                    <a class="teams-list" href="/teams/{{team.id}}/players">{{team.team_name}}</a> <a class="edit-icon" href="/teams/{{team.id}}/edit"><i
                             class="fas fa-edit fa-1x"></i>edit</a>
                 </form>
             </td>
