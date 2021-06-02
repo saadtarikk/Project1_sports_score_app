@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Upcoming fixtures</h1>
+
+<table class="table-fixtures">
+    <thead>
+        <tr>
+            <th class="table-col-fixture-date">Fixture Date</th>
+            <th>Home Team</th>
+            <th>vs</th>
+            <th>Away Team</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for fixture in fixtures %}
+            {% if (team_name == teams[fixture.home_team-1].team_name) or (team_name ==
+            teams[fixture.away_team-1].team_name) %}
+            <tr>
+                <td class="table-col-fixture-date">{{fixture.fixture_date}}</td>
+                <td>{{teams[fixture.home_team-1].team_name}}</td>
+
+                 {% if fixture.fixture_result %}
+                <td>{{fixture.fixture_result}}</td>
+                {% else %}
+                <td>vs</td>
+                {% endif %}
+
+                <td>{{teams[fixture.away_team-1].team_name}}</td>
+
+            </tr>
+            {% endif %}
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

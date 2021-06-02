@@ -16,7 +16,6 @@
                 <td class="table-col-fixture-date">{{fixture.fixture_date}}</td>
                 <td class="table-col-teams"><a
                     href="/fixtures_list/{{teams[fixture.home_team-1].team_name}}/team_fixtures">{{teams[fixture.home_team-1].team_name}}</a>
-                    <!-- <span class="tooltiptext">View teams fixtures</span> -->
                 </td>
                 {% if fixture.fixture_result %}
                  <td>{{fixture.fixture_result}}</td>
@@ -27,7 +26,6 @@
             <td class="table-col-teams"><a
                     href="/fixtures_list/{{teams[fixture.away_team-1].team_name}}/team_fixtures">
                     {{teams[fixture.away_team-1].team_name}}</a>
-                <!-- <span class="tooltiptext">View teams fixtures</span> -->
             </td>
 
 
@@ -35,27 +33,7 @@
         {% endfor %}
     </tbody>
     
-    <!-- <tbody>
- 
-        {% for fixture in all_fixtures %}
-            <tr>
-            
-                <td class="table-col-fixture-date">{{fixture.date}}</td>
-                <td>{{fixture.home}}</td>
-
-                {% if fixture.score %}
-                    <td>{{fixture.score}}</td>
-                {% else %}
-                    <td>vs</td>
-                {% endif %}
-
-                <td>{{fixture.away}}</td>
-
-            </tr>
-
-        {% endfor %}
-
-    </tbody> -->
+        </tbody>
 </table>
 
 {% endblock %}

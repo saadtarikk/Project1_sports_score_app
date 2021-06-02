@@ -14,7 +14,7 @@ body {
   font-family: "Lato", sans-serif;
   color: #fff;
   background-color: #444;
-  /* line-height: 1.5; */
+  line-height: 1.5;
 
   /* keep footer at bottom (along with footer css styling ) */
   position: relative;
@@ -27,32 +27,20 @@ body {
   text-transform: uppercase;
   font-size: 42px;
   font-weight: 700;
-  /* background: var(--primary-color); */
   text-align: left;
   margin: 0;
-  /* padding: 0.3em 1em; */
   color: #fff;
   background-color: rgba(0, 0, 0, 0.55);
 }
 
 header {
-  background-image: url(../static/images/black-white-soccer-ball-on-grass-field-web-header.jpeg);
   background-position: bottom;
 }
 
-.subtitle {
-  background: var(--primary-color);
-  margin-top: 0;
-  margin-bottom: 0;
-  border-top: 1px solid grey;
-  padding: 0.5em 2em;
-  background-color: rgba(0, 0, 0, 0.55);
-}
 /* End Header Styling  */
 
 /* Nav Styling */
 .nav {
-  background: var(--secondary-color);
   padding: 1em;
   padding-left: 1.5em;
   background-position: bottom;
@@ -74,10 +62,10 @@ header {
   border-right: 3px solid var(--primary-color);
 }
 
-/* .nav > ul > li:first-child,
+.nav > ul > li:first-child,
 .nav > ul > li:last-child {
   border-left: 3px solid var(--primary-color);
-} */
+}
 
 .nav > ul > li:nth-child(3) {
   margin-right: auto;
@@ -128,7 +116,7 @@ header {
   text-decoration: none;
   display: inline-flex;
   width: auto;
-  border-radius: 8px;
+  border-radius: 14px;
 }
 
 .btn:hover,
@@ -139,7 +127,6 @@ header {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
   transition: 0.3s;
-  cursor: pointer;
 }
 
 .btn-links {
@@ -187,6 +174,7 @@ header {
 
 .fixture-layout {
   width: auto;
+  line-height: 1.5;
 }
 
 #fixture_result {
@@ -221,50 +209,18 @@ thead {
 }
 
 th {
-  text-align: left;
-}
-
-/* Do not affect last updated text line aligned left */
-td:not(:last-of-type) {
-  text-align: center;
-}
-
-td:nth-of-type(2) {
-  text-align: left;
-}
-
-.table-col-form {
-  letter-spacing: 0.5em;
-  text-align: justify;
-  font-family: "Helvetica";
-}
-
-.table-col-points,
-.table-col-teams {
-  font-weight: bold;
+  text-align: right;
 }
 
 tr:hover {
   background-color: var(--primary-color);
 }
 
-tfoot {
-  font-weight: lighter;
-  margin-left: 1em;
-  text-align: left;
-}
-
-tfoot > * :hover {
-  background-color: white;
-}
 
 .table-fixtures {
   width: auto;
 }
 
-.table-league {
-  border-bottom: 1px dashed lightgrey;
-}
 
 .table-fixtures > tbody > tr > td {
   text-align: center;
@@ -280,6 +236,6 @@ tfoot > * :hover {
 }
 
 .table-col-fixture-date {
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 /* END of table styling 

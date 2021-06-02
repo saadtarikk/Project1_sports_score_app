@@ -8,8 +8,8 @@ from models.fixture import Fixture
 
 def save(fixture):
     sql = "INSERT INTO fixtures (home_team, away_team, fixture_date, fixture_result, league_id) VALUES (%s, %s, %s, %s, %s) RETURNING id "
-    values = [fixture.home_team, fixture.away_team, fixture.fixture_date,
-              fixture.fixture_result, fixture.league_id]
+    values = [fixture.home_team, fixture.away_team,
+              fixture.fixture_date, fixture.fixture_result, fixture.league_id]
     results = run_sql(sql, values)
     id = results[0]['id']
     fixture.id = id
@@ -29,7 +29,7 @@ def select_all():
 
 def select(id):
     fixture = None
-    sql = "SELECT * FROM fixture WHERE id = %s"
+    sql = "SELECT * FROM fixtures WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
     if result is not None:
@@ -52,5 +52,5 @@ def delete(id):
 def update(fixture):
     sql = "UPDATE fixtures SET (home_team, away_team, fixture_location, fixture_result, league_id) = (%s, %s, %s, %s, %s) WHERE id = %s"
     values = [fixture.home_team, fixture.away_team,
-              fixture.fixture_location, fixture.fixture_result, fixture.league_id]
+              fixture.fixture_result, fixture.league_id]
     run_sql(sql, values)
